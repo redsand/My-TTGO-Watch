@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>T-Watch Web Flasher</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>T-Watch Web Flasher</h1>
+
+  <label>Choose Firmware Source:</label>
+  <select id="mode">
+    <option value="upload">Upload Local Firmware</option>
+    <option value="url" selected>Download Firmware from URL</option>
+  </select>
+
+  <div id="upload-section" style="display:none;">
+    <input type="file" id="firmware" multiple>
+    <div id="drop-area">Or drag & drop firmware files here</div>
+  </div>
+
+  <div id="url-section">
+    <input type="text" id="firmware-url" placeholder="https://yourserver.com/firmware.bin">
+    <button id="download-firmware">Download Firmware</button>
+  </div>
+
+  <br>
+  <label><input type="checkbox" id="eraseFlash"> Erase Flash Before Flashing</label><br><br>
+
+  <button id="connect">Connect to T-Watch</button>
+  <button id="flash" disabled>Flash Firmware</button>
+
+  <div id="progress">
+    <div id="progress-bar"></div>
+  </div>
+
+  <pre id="log"></pre>
+
+  <script module>window.esptoolPackage=import("https://unpkg.com/esp-web-flasher@5.1.4/dist/web/index.js?module")</script>
+  <script src="flasher.js"></script>
+
+</body>
+</html>

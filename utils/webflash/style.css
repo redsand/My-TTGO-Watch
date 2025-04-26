@@ -1,0 +1,41 @@
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f7f7f7;
+}
+h1 {
+  color: #333;
+}
+#controls {
+  margin-bottom: 20px;
+}
+#progress {
+  width: 100%;
+  background: #ddd;
+  margin-top: 10px;
+}
+#progress-bar {
+  width: 0%;
+  height: 20px;
+  background: #4caf50;
+}
+#drop-area {
+  border: 2px dashed #999;
+  padding: 20px;
+  text-align: center;
+  color: #666;
+  margin-bottom: 20px;
+}
+#drop-area.dragover {
+  background: #eef;
+}
+#log {
+  background: #222;
+  color: #eee;
+  padding: 10px;
+  height: 250px;
+  overflow-y: auto;
+}
+.success { color: #4caf50; }
+.error { color: #f44336; }
